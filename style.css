@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #69013b;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@ body {
 }
 
 .game-container {
-    background: rgba(255, 255, 255, 0.95);
+    background: #fce0d1;
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -46,7 +46,7 @@ body {
 }
 
 .score-item {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: #69013b;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -208,7 +208,7 @@ body {
 }
 
 #startBtn {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: #69013b;
     color: white;
 }
 
@@ -218,7 +218,7 @@ body {
 }
 
 #pauseBtn {
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    background: #69013b;
     color: white;
 }
 
