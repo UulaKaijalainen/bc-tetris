@@ -260,9 +260,12 @@ class Tetris {
     }
     
     hardDrop() {
+
         while (this.movePiece(0, 1)) {
+
             this.score += 2;
         }
+        this.updateDisplay();
     }
     
     isValidMove(shape, x, y) {
