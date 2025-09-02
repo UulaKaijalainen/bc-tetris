@@ -120,6 +120,13 @@ class Tetris {
         
         // Keyboard events
         document.addEventListener('keydown', (e) => {
+                if(e.code=== 'KeyP') {
+               
+                    e.preventDefault();
+                    if(this.gameRunning){
+                    this.togglePause();}
+                    return;}
+            
             if (!this.gameRunning || this.gamePaused) return;
             
             switch(e.code) {
@@ -144,8 +151,10 @@ class Tetris {
                     this.hardDrop();
                     break;
                 case 'KeyP':
-                    e.preventDefault();
+                   e.preventDefault();
                     this.togglePause();
+                   
+                    
                     break;
             }
         });
@@ -176,6 +185,8 @@ class Tetris {
         this.gamePaused = !this.gamePaused;
         const pauseBtn = document.getElementById('pauseBtn');
         pauseBtn.textContent = this.gamePaused ? 'Resume' : 'Pause';
+
+        
         
         if (!this.gamePaused) {
             this.gameLoop();
