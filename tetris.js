@@ -126,37 +126,47 @@ class Tetris {
                     if(this.gameRunning){
                     this.togglePause();}
                     return;}
+                    
             
             if (!this.gameRunning || this.gamePaused) return;
-            
+            let moved = false;
             switch(e.code) {
                 case 'ArrowLeft':
                     e.preventDefault();
-                    this.movePiece(-1, 0);
+                    moved =this.movePiece(-1, 0);
+                    
                     break;
                 case 'ArrowRight':
                     e.preventDefault();
-                    this.movePiece(1, 0);
+                     moved =this.movePiece(1, 0);
+                     
                     break;
                 case 'ArrowDown':
                     e.preventDefault();
-                    this.movePiece(0, 1);
+                    moved =this.movePiece(0, 1);
+                     
                     break;
                 case 'ArrowUp':
                     e.preventDefault();
                     this.rotatePiece();
+             moved = true;
                     break;
                 case 'Space':
                     e.preventDefault();
                     this.hardDrop();
+                     
                     break;
-                case 'KeyP':
+                case 'KeyP':++
                    e.preventDefault();
                     this.togglePause();
                    
                     
-                    break;
-            }
+                    break;}
+                    if(moved){
+                        this.draw();
+                        this.updateDisplay();
+                    }
+            
         });
     }
     
