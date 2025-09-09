@@ -197,12 +197,16 @@ class Tetris {
         pauseBtn.textContent = this.gamePaused ? 'Resume' : 'Pause';
 
         if (this.gamePaused) {
-            document.getElementById('overlayTitle').textContent = 'Paused';
+             document.getElementById('overlayTitle').textContent = 'Paused';
+        document.getElementById('gameOverlay').classList.add('active');
+            document.getElementById('overlayMessage').textContent = 'Press Resume to continue';
         }
         
         
         if (!this.gamePaused) {
             this.gameLoop();
+            
+             document.getElementById('gameOverlay').classList.remove('active');
         }
     }
     
