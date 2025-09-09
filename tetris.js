@@ -156,7 +156,7 @@ class Tetris {
                     this.hardDrop();
                      
                     break;
-                case 'KeyP':
+                case 'KeyP':++
                    e.preventDefault();
                     this.togglePause();
                    
