@@ -1,3 +1,8 @@
+# tiketti 12 miten pelata
+lataa Live server extension, vasemmalta ruudukko iconista, hae Live server, ja lataa
+käynnistä tetris painamalla Go Live oikeasta alakulmasta
+paina Start Game
+
 # Tetris Game
 
 A classic Tetris game built with HTML5 Canvas and JavaScript, featuring modern UI design and session-based high score tracking.
